@@ -1,0 +1,134 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(
+    rgba(255, 255, 0, 0.578),
+    rgba(255, 166, 0, 0.518)
+  );
+}
+
+.card {
+  position: relative;
+  width: 350px;
+  height: 190px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.463);
+  transition: 0.5s;
+}
+
+.card:hover {
+  height: 450px;
+}
+
+.imag {
+  position: absolute;
+  left: 50%;
+  top: -50px;
+  transform: translateX(-50%);
+  height: 150px;
+  width: 150px;
+  background-color: rgb(19, 18, 18);
+  border-radius: 20px;
+  box-shadow: 0 2px 40px rgba(0, 0, 0, 0.463);
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+.imag img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card:hover .imag {
+  height: 250px;
+  width: 250px;
+}
+
+.card .content {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.card .content .details {
+  padding: 40px;
+  text-align: center;
+  width: 100%;
+  transition: 0.5s;
+  transform: translateY(140px);
+}
+.card:hover .content .details {
+  transform: translateY(0px);
+}
+.card .content .details h2 {
+  font-size: 1.25rem;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.411);
+  font-weight: 500;
+  color: rgba(14, 14, 14, 0.841);
+  line-height: 1.2rem;
+}
+
+.card .content .details h2 span {
+  font-size: 0.95rem;
+  font-family: 500;
+  opacity: 0.5;
+}
+
+.card .content .details .data {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.card .content .details .data h3 {
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 1.2rem;
+  color: rgba(14, 14, 14, 0.841);
+}
+
+.card .content .details .data h3 span {
+  font-size: 0.85rem;
+  font-weight: 500;
+  opacity: 0.6;
+}
+
+.card .content .details .btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card .content .details .btn button {
+  padding: 10px 30px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  background-color: rgba(255, 166, 0, 0.841);
+  border-radius: 5px;
+}
+
+.card .content .details .btn button:nth-child(2) {
+  border: 1px solid rgba(128, 128, 128, 0.51);
+  color: grey;
+  background: white;
+}
